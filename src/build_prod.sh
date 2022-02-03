@@ -1,3 +1,3 @@
-mkdir ../dist/files
-cp ../*.pdf ../dist/files
-cp ./static/* ../dist/
+mkdir ../docs/files
+cp ../*.pdf ../docs/files
+cp ./static/* ../docs/

@@ -13,7 +13,7 @@ function getConfig (production) {
     SITE_URL: production ? 'https://yugaan24x7.github.io' : LOCAL_URL + PORT,
     HTML_FOLDER: 'material',
     PDF_FOLDER: 'files',
-    OUT_DIR: production ? join('..', 'dist') : 'build'
+    OUT_DIR: production ? join('..', 'docs') : 'build'
   }
 }
 
