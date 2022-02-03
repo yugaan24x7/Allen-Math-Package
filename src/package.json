@@ -1,0 +1,26 @@
+{
+  "name": "allen-packages",
+  "version": "1.0.0",
+  "description": "PDF Viewer for allen-packages",
+  "main": "build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV=DEV node build.js && bash build.sh",
+    "serve": "serve ./build",
+    "build": "NODE_ENV=PRODUCTION node build.js && bash build_prod.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yugaan24x7/Allen-Math-Package.git"
+  },
+  "author": "Jytesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yugaan24x7/Allen-Math-Package/issues"
+  },
+  "homepage": "https://github.com/yugaan24x7/Allen-Math-Package#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "serve": "^13.0.2"
+  }
+}
