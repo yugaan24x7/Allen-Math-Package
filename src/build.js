@@ -18,7 +18,7 @@ function getConfig (production) {
 }
 
 ;(async () => {
-  const files = (await readdir('..')).filter(file => file.endsWith('.pdf'))
+  const files = (await readdir('../pdfs')).filter(file => file.endsWith('.pdf'))
   const template = await readFile('./templates/file.html', 'utf8')
   const indexTemplate = await readFile('./templates/index.html', 'utf8')
   const index = indexTemplate.replace('{{ template }}', files.map(file => `<li><a href="${join(config.HTML_FOLDER, file.replace('.pdf', ''))}">${file}</a></li>`).join('\n'))

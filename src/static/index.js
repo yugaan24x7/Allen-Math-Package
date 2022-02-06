@@ -1,1 +1,2 @@
-navigator.serviceWorker.register('/sw.js');
+let path = document.querySelector('script').attributes.src.value.replace('index', 'sw')
+navigator.serviceWorker.register(path);
