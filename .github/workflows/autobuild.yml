@@ -12,21 +12,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Cache pnpm modules
+      uses: actions/cache@v2
+      with:
+        path: ~/.pnpm-store
+        key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+        restore-keys: |
+          ${{ runner.os }}-
 
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
         node-version: ${{ env.NODE_VERSION }}
-        cache: 'npm'
 
-    - name: npm install, build, and test
-      run: |
-        cd src/
-        npm install
-        npm run build
+    - name: Set up pnpm
+      uses: pnpm/action-setup@v2.0.1
+      with:
+        version: 6.29.1
+        run_install: |
+          - cwd: src
+
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@4.1.0
       with:
         branch: gh-pages
+        folder: docs
 
 
