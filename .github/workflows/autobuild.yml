@@ -31,7 +31,8 @@ jobs:
         version: 6.29.1
         run_install: |
           - cwd: src
-
+    - name: Build
+      run: cd src/ && pnpm build
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@4.1.0
       with:
