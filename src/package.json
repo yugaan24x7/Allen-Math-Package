@@ -5,9 +5,9 @@
   "main": "build.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "NODE_ENV=DEV node build.js && bash build.sh",
+    "dev": "NODE_ENV=DEV node build.js && NODE_ENV=DEV bash build.sh",
     "serve": "serve ./build",
-    "build": "NODE_ENV=PRODUCTION node build.js && bash build_prod.sh"
+    "build": "NODE_ENV=PRODUCTION node build.js && NODE_ENV=PRODUCTION bash build.sh"
   },
   "repository": {
     "type": "git",
