@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "NODE_ENV=DEV node build.js && NODE_ENV=DEV bash build.sh",
-    "serve": "serve ./build",
+    "serve": "serve --host 0.0.0.0 ./build",
     "build": "NODE_ENV=PRODUCTION node build.js && NODE_ENV=PRODUCTION bash build.sh"
   },
   "repository": {
